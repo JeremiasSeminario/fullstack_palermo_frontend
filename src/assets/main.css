@@ -1,0 +1,224 @@
+:root {
+  /* Paleta */
+  --color-primary: #0077b6;
+  --color-primary-light: #00b4d8;
+  --color-primary-dark: #03045e;
+  --color-secondary: #caf0f8;
+  --color-secondary-dark: #90e0ef;
+  --color-accent: #ff9e00;
+  --color-accent-light: #ffb703;
+  --color-success: #38b000;
+  --color-warning: #ff9500;
+  --color-error: #d90429;
+  --color-dark: #1a1a2e;
+  --color-gray-dark: #343a40;
+  --color-gray: #6c757d;
+  --color-gray-light: #adb5bd;
+  --color-light: #f8f9fa;
+  --color-white: #ffffff;
+
+  /* Spacing */
+  --space-xxs: 0.25rem;
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-xxl: 3rem;
+
+  /* Typography */
+  --font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-size-sm: 0.875rem;
+  --font-size-md: 1rem;
+  --font-size-lg: 1.25rem;
+  --font-size-xl: 1.5rem;
+  --font-size-xxl: 2rem;
+
+  /* Border radius */
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 6px;
+  --radius-full: 9999px;
+
+  font-family: var(--font-family);
+  line-height: 1.5;
+  font-weight: 400;
+  color: var(--color-dark);
+  background-color: var(--color-light);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* CSS Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border: none;
+  border-radius: var(--radius-md);
+  padding: var(--space-sm) var(--space-lg);
+  font-size: var(--font-size-md);
+}
+
+button:hover {
+  background-color: var(--color-primary-dark);
+}
+
+button:active {
+  transform: none;
+}
+
+button.secondary {
+  background-color: var(--color-secondary);
+  color: var(--color-dark);
+}
+
+button.secondary:hover {
+  background-color: var(--color-secondary-dark);
+}
+
+button.accent {
+  background-color: var(--color-accent);
+}
+
+button.accent:hover {
+  background-color: var(--color-accent-light);
+}
+
+button.text {
+  background-color: transparent;
+  color: var(--color-primary);
+  padding: var(--space-xs);
+}
+
+button.text:hover {
+  background-color: rgba(0, 119, 182, 0.05);
+  color: var(--color-primary-dark);
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+input, select, textarea {
+  font-family: inherit;
+  font-size: var(--font-size-md);
+  padding: var(--space-sm) var(--space-md);
+  border: 1px solid var(--color-gray-light);
+  border-radius: var(--radius-md);
+  background-color: var(--color-white);
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: none;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color-primary-dark);
+}
+
+/* Card */
+.card {
+  background-color: var(--color-secondary);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+/* Section styling */
+.section {
+  margin-bottom: var(--space-xl);
+}
+
+.section-title {
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--space-lg);
+  color: var(--color-primary-dark);
+}
+
+/* Grid system */
+.grid {
+  display: grid;
+  gap: var(--space-lg);
+}
+
+.grid-col-1 {
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 576px) {
+  .grid-col-2-sm {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .grid-col-3-md {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .grid-col-4-lg {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Utility classes */
+.text-center {
+  text-align: center;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.mt-sm { margin-top: var(--space-sm); }
+.mt-md { margin-top: var(--space-md); }
+.mt-lg { margin-top: var(--space-lg); }
+
+.mb-sm { margin-bottom: var(--space-sm); }
+.mb-md { margin-bottom: var(--space-md); }
+.mb-lg { margin-bottom: var(--space-lg); }
+
+.p-sm { padding: var(--space-sm); }
+.p-md { padding: var(--space-md); }
+.p-lg { padding: var(--space-lg); }
